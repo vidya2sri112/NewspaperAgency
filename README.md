@@ -283,3 +283,4 @@ This project demonstrates:
 **Web Interface**: http://localhost:5000  
 **Admin Panel**: http://localhost:5000/admin.html  
 **Java Console**: `./compile_and_run.sh`"# NewspaperAgency" 
+"# NewspaperAgency" 
