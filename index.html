@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Agency Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading news articles...</p>
+    </div>
+
+    <header>
+        <div class="head">
+            <p>NEWSPAPER AGENCY MANAGEMENT</p>
+            <div id="current-datetime" class="datetime-display"></div>
+        </div>
+        <nav class="menu-items">
+            <a href="index.html" class="active"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="https://www.aninews.in/" class="a1"><i class="fa-solid fa-user"></i>About us</a>
+            <a href="admin.html" class="a2"><i class="fa-solid fa-cog"></i>Admin</a>
+            <a href="tel:9346462993" class="a3"><i class="fa-solid fa-phone"></i>Contact us</a>
+            <a href="mailto:mindibhargavi@gmail.com" class="a4"><i class="fa-solid fa-envelope"></i>Email</a>
+        </nav>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search articles by title...">
+                <button id="clear-search" class="clear-btn"><i class="fa-solid fa-times"></i></button>
+            </div>
+        </div>
+        
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="region-filter">Region:</label>
+                <select id="region-filter">
+                    <option value="">All Regions</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="language-filter">Language:</label>
+                <select id="language-filter">
+                    <option value="">All Languages</option>
+                </select>
+            </div>
+            
+            <button id="refresh-news" class="refresh-btn">
+                <i class="fa-solid fa-refresh"></i>
+                Refresh News
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured News Carousel -->
+    <section class="featured-section">
+        <h2>Featured News</h2>
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div id="featured-carousel" class="carousel-track">
+                    <!-- Featured articles will be dynamically loaded here -->
+                </div>
+            </div>
+            <button class="carousel-btn prev-btn" id="prev-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next-btn" id="next-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Traditional Newspaper Cards Section -->
+        <div class="newspaper-grid">
+            <div class="newspaper-card" id="card-1">
+                <div class="card-overlay">
+                    <h3>Andhra Jyothi</h3>
+                    <p>Leading Telugu daily newspaper</p>
+                </div>
+                <a href="https://www.andhrajyothy.com" target="_blank"></a>
+            </div>
+            
+            <div class="newspaper-card" id="card-2">
+                <div class="card-overlay">
+                    <h3>Indian Express</h3>
+                    <p>National English daily</p>
+                </div>
+                <a href="https://indianexpress.com" target="_blank"></a>
+            </div>
+            
+            <div class="newspaper-card" id="card-3">
+                <div class="card-overlay">
+                    <h3>Eenadu</h3>
+                    <p>Popular Telugu newspaper</p>
+                </div>
+                <a href="https://www.eenadu.net" target="_blank"></a>
+            </div>
+            
+            <div class="newspaper-card" id="card-4">
+                <div class="card-overlay">
+                    <h3>The Hindu</h3>
+                    <p>Trusted English daily</p>
+                </div>
+                <a href="https://www.thehindu.com" target="_blank"></a>
+            </div>
+            
+            <div class="newspaper-card" id="card-5">
+                <div class="card-overlay">
+                    <h3>Sakshi</h3>
+                    <p>Telugu news publication</p>
+                </div>
+                <a href="https://www.sakshi.com" target="_blank"></a>
+            </div>
+        </div>
+
+        <!-- Dynamic Articles Section -->
+        <section class="articles-section">
+            <h2>Latest Articles</h2>
+            <div id="articles-container" class="articles-grid">
+                <!-- Articles will be dynamically loaded here -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="no-results" class="no-results hidden">
+                <i class="fa-solid fa-newspaper"></i>
+                <h3>No articles found</h3>
+                <p>Try adjusting your search criteria or filters</p>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button id="load-more" class="load-more-btn hidden">
+                    <i class="fa-solid fa-plus"></i>
+                    Load More Articles
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Article Modal -->
+    <div id="article-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-article-content">
+                <!-- Article content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Newspaper Agency Management. All rights reserved.</p>
+            <p>Stay informed with the latest news from trusted sources.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
